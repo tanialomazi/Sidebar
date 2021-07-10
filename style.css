@@ -1,0 +1,130 @@
+﻿
+body {
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+}
+
+.aside {
+    width: 300px;
+    padding: 20px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0,0,0,0.3) 5px 0 10px;
+    transform: translate(-100%);
+    transition: linear 0.5s;
+}
+
+.show-aside {
+    transform: translate(0);
+}
+
+
+.logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+.close-btn {
+    color: darkred;
+    font-size: 1.5em;
+}
+
+    .close-btn:hover {
+        transform: scale(1.5);
+        cursor: pointer;
+    }
+
+.links {
+    margin-top: 10px;
+}
+
+    .links li {
+        display: block;
+    }
+
+    .links a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+        font-weight: bold;
+        font-family: calibri;
+        padding: 10px 0 10px 5px;
+        margin: 5px 0;
+    }
+
+        .links a:hover {
+            color: white;
+            background-color: dodgerblue;
+            cursor: pointer;
+        }
+
+.social-medias {
+    display: flex;
+    justify-content: center;
+}
+
+    .social-medias li {
+        display: inline-block;
+        position: relative;
+        top: 20em;
+    }
+
+    .social-medias a {
+        color: dodgerblue;
+        padding: 10px;
+        font-size: 1.5em;
+    }
+
+        .social-medias a:hover {
+            color: darkblue;
+        }
+
+.btn {
+    position: sticky;
+    left: 96%;
+    background-color: transparent;
+    color: dodgerblue;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.5em;
+    animation: piscar 0.7s infinite; /*faz uso da animação "piscar" descrita abaixo*/
+}
+
+    .btn:hover {
+        cursor: pointer;
+    }
+
+@keyframes piscar {
+    from {opacity: 1;
+          background-color: transparent;
+    }
+    to {opacity: 0.5;
+        background-color: dodgerblue;
+        color: white;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .aside {
+        width: 100%;
+        transform: translate(0);
+    }
+
+    .btn {
+        display: none;
+    }
+}

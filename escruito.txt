@@ -1,0 +1,161 @@
+HTML
+
+<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta charset="viewport" content="width=width-device" />
+
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+
+    <title>SideBar</title>
+</head>
+<body>
+    <aside class="aside show-aside">
+        <div class="logo-box">
+            <img src="logo.png" alt="logo" class="logo"/>
+            <i class="fas fa-times close-btn"></i>
+        </div>
+
+        <ul class="links">
+            <li><a href="home.html">home</a></li>
+            <li><a href="about.html">sobre</a></li>
+            <li><a href="projects.html">projetos</a></li>
+            <li><a href="contact.html">Contato</a></li>
+        </ul>
+
+        <ul class="social-medias">
+            <li>
+                <a href="https://www.facebook.com">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </li>            <li>
+                <a href="https://www.twitter.com">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>            <li>
+                <a href="https://www.instagram.com">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>            <li>
+                <a href="https://www.pinterest.com">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </li>
+
+        </ul>
+    </aside>
+
+    <button class="btn"><i class="fab fa-bars"></i></button>
+
+    
+</body>
+</html>
+
+
+
+CSS
+
+body
+{
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+}
+
+.aside {
+    width: 400px;
+    padding: 20px;
+    height: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0,0,0,0.3) 5px 0 10px;
+    transform: translate(-100%);
+}
+
+.show-aside {
+    transform: translate(0);
+}
+
+
+.logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+.close-btn {
+    color: darkred;
+    font-size: 1.5em;
+}
+
+.close-btn:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.links li {
+    display: block;
+}
+
+.links a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-family: calibri;
+    padding: 10px 0 10px 5px;
+    margin: 5px 0;
+}
+
+.links a:hover{
+    color: white;
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+
+.social-medias {
+    display: flex;
+    justify-content: center;
+}
+
+.social-medias li {
+    display: inline-block;
+    margin: 320px 0 0 0;
+}
+
+.social-medias a {
+    color: dodgerblue;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.social-medias a:hover {
+    color: darkblue;
+}
+
+.btn {
+
+}
+
+
+@media screen and (max-width: 400px) {
+    .aside {
+        width: 100%;
+    }
+}
